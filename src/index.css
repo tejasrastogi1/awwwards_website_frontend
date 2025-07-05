@@ -296,6 +296,30 @@ body {
   }
 }
 
+/* Enhanced button hover effects */
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Button glow animation */
+@keyframes button-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(255, 235, 59, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 235, 59, 0.6), 0 0 30px rgba(255, 235, 59, 0.4);
+  }
+}
+
+button:hover {
+  animation: button-glow 1.5s ease-in-out infinite;
+}
+
 /* Additional text rendering optimizations for better font clarity */
 * {
   -webkit-font-smoothing: antialiased;
