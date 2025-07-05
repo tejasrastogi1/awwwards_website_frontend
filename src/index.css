@@ -320,7 +320,6 @@ button:hover {
   animation: button-glow 1.5s ease-in-out infinite;
 }
 
-/* Additional text rendering optimizations for better font clarity */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
