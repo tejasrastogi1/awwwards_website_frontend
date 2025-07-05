@@ -69,19 +69,19 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
-  .special-font b {
-    font-family: "Zentry";
-    font-feature-settings: "ss01" on;
-  }
-
   .hero-heading {
     @apply uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem];
+    font-family: "zentry", sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    color: #f1f1ff;
+    text-rendering: geometricPrecision;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+    text-shadow: none;
+    transform: none !important;
+    will-change: auto;
+    backface-visibility: visible;
   }
 
   .about-subtext {
@@ -98,21 +98,25 @@ body {
 
   .animated-word {
     @apply special-font font-zentry font-black opacity-0;
+    font-family: "zentry", sans-serif;
+    font-weight: normal;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: none;
     transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
     transform-origin: 50% 50% -150px !important;
     will-change: opacity, transform;
   }
 
-  .bento-tilt_1 {
-    @apply relative border-hsla col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out;
-  }
-
-  .bento-tilt_2 {
-    @apply relative col-span-1 row-span-1 overflow-hidden rounded-md transition-transform duration-300 ease-out;
-  }
-
   .bento-title {
     @apply uppercase md:text-6xl text-4xl font-black font-zentry;
+    font-family: "zentry", sans-serif;
+    font-weight: normal;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: none;
   }
 
   .story-img-container {
@@ -152,6 +156,14 @@ body {
 
   .contact-clip-path-2 {
     clip-path: polygon(29% 15%, 85% 30%, 50% 100%, 10% 64%);
+  }
+
+  .bento-tilt_1 {
+    @apply relative border-hsla col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out;
+  }
+
+  .bento-tilt_2 {
+    @apply relative col-span-1 row-span-1 overflow-hidden rounded-md transition-transform duration-300 ease-out;
   }
 }
 
@@ -290,7 +302,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.hero-heading,
 .special-font,
 .font-zentry {
   text-rendering: optimizeLegibility;
@@ -299,14 +310,6 @@ body {
   font-feature-settings: "kern" 1, "liga" 1;
   font-kerning: normal;
   font-variant-ligatures: common-ligatures;
-}
-
-/* Force hardware acceleration for better text rendering */
-.hero-heading {
-  transform: translateZ(0);
-  will-change: transform;
-  backface-visibility: hidden;
-  perspective: 1000px;
 }
 
 /* Ensure proper font weights are applied */

@@ -45,7 +45,7 @@ const AnimatedTitle = ({ title, containerClass }) => {
             <span
               key={idx}
               className="animated-word"
-              dangerouslySetInnerHTML={{ __html: word }}
+              dangerouslySetInnerHTML={{ __html: word.replace(/<b>(.*?)<\/b>/g, '$1') }}
             />
           ))}
         </div>
